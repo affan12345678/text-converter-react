@@ -22,9 +22,10 @@ body {
   --app-background: linear-gradient(
     45deg,
     rgba(230, 230, 250, 1) 0%,
-    rgba(225, 225, 250, 1) 100%
+    rgb(206, 206, 255) 100%
   );
   --app-btun-background: rgb(206, 206, 255);
+  --theme-toggle-btun-background: rgb(200, 200, 255);
   --app-btun-hover-background: rgb(200, 200, 255);
   --app-btun-clicked-background: rgb(190, 190, 255);
 }
@@ -34,8 +35,9 @@ body.dark-theme {
   --app-background: linear-gradient(
     45deg,
     rgb(110, 110, 110) 0%,
-    rgb(94, 94, 94) 100%
+    rgb(60, 60, 60) 100%
   );
+  --theme-toggle-btun-background: rgb(140, 140, 140);
   --app-btun-background: rgb(150, 150, 150);
   --app-btun-hover-background: rgb(160, 160, 160);
   --app-btun-clicked-background: rgb(170, 170, 170);
@@ -177,10 +179,15 @@ body.dark-theme {
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
 }
 
+#text-converter-app {
+  width: calc(100%);
+  height: 100%;
+}
+
 .converter-app-header {
   height: var(--app-header-height);
   font-family: "roboto", "sans-serif";
-  font-size: 1.2rem;
+  font-size: calc(var(--app-header-height)/2rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -188,25 +195,23 @@ body.dark-theme {
 
 .toggle-theme-btun-container {
   height: 80%;
-  width: 3rem;
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #toggle-theme-btun {
-  width: 2rem;
-  height: 2rem;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background-color: auto;
   border: none;
-  background-color: var(--app-btun-background);
+  background-color: var(--theme-toggle-btun-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#text-converter-app {
-  width: calc(100%);
-  height: 100%;
-}
 
 .input-textarea {
   height: var(--app-main-height);
@@ -233,12 +238,12 @@ body.dark-theme {
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 
 .converter-app-btun {
   height: 2.2rem;
   min-width: 4rem;
-  width: fit-content;
   padding: 4px 10px;
   border-radius: 5px;
   margin: 0 10px;
@@ -246,10 +251,31 @@ body.dark-theme {
   background-color: var(--app-btun-background);
   color: var(--txt-color);
   font-family: "roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .converter-app-btun:hover {
   background-color: var(--app-btun-hover-background);
 }
 .converter-app-btun:active {
   background-color: var(--app-btun-clicked-background);
+}
+
+
+@media (max-width: 720px) {
+  .application {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin: 0;
+    font-size: 0.5rem;
+  }
+  .converter-app-btun {
+    width: 30%;
+    font-size: 0.790rem;
+    font-weight: 400;
+    height: 40%;
+    margin: 0 5px;
+  }
 }
