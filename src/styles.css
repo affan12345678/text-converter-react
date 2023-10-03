@@ -16,6 +16,7 @@
 
 body {
   background-color: white;
+  font-family: 'Roboto', sans-serif;
   --txt-color: black;
   --body-background: rgb(225, 225, 255);
   --app-background: linear-gradient(
@@ -43,6 +44,7 @@ body.dark-theme {
   min-height: 100vh;
   background-color: var(--body-background);
   color: var(--txt-color);
+  font-family: 'Roboto', sans-serif;
 }
 
 /* .navbar {
