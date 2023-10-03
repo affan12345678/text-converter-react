@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navbar-height: 4rem;
+  --txt-color: ;
+  --body-background: ;
+}
+
+body {
+  background-color: white;
+  --txt-color: black;
+  --body-background: rgb(225, 225, 255);
+  --app-background: linear-gradient(
+    45deg,
+    rgba(230, 230, 250, 1) 0%,
+    rgba(220, 220, 250, 1) 100%
+  );
+  --app-btun-background: rgb(206, 206, 255);
+  --app-btun-hover-background: rgb(200, 200, 255);
+  --app-btun-clicked-background: rgb(190, 190, 255);
+}
+
+body.dark-theme {
+  --app-background: rgba(110, 110, 110, 0.6);
+  --app-background: linear-gradient(
+    45deg,
+    rgb(110, 110, 110) 0%,
+    rgb(94, 94, 94) 100%
+  );
+  --app-btun-background: rgb(150, 150, 150);
+  --app-btun-hover-background: rgb(160, 160, 160);
+  --app-btun-clicked-background: rgb(170, 170, 170);
+  --txt-color: white;
+  --body-background: rgb(40, 40, 40);
+  min-height: 100vh;
+  background-color: var(--body-background);
+  color: var(--txt-color);
+}
+
+/* .navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--navbar-height);
+  color: var(--txt-color);
+  background-color: var(--body-background);
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: calc((100%));
+}
+
+.left {
+  min-width: 32%;
+  width: auto;
+  max-width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
+}
+
+.logo-box {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.middle {
+  width: auto;
+  height: 100%;
+}
+
+.middle ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: auto;
+}
+
+.right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 2rem;
+  width: 90%;
+}
+
+.search-form {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 px;
+  border: 1px solid var(--txt-color);
+  border-radius: 2rem;
+  color: var(--txt-color);
+}
+
+#search {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 90%;
+  color: var(--txt-color);
+}
+
+.search-button {
+  height: 2rem;
+  width: 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  border-radius: 2rem;
+} */
+
+.main-main {
+  background-color: transparent;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.application {
+  --app-height: 32rem;
+  --app-padding-topbottom: 0.8rem;
+  --app-padding-leftright: 1.5rem;
+  --app-header-height: 15%;
+  --app-main-height: 65%;
+  --app-footer-height: 20%;
+  background: var(--app-background);
+  width: 65%;
+  height: var(--app-height);
+  min-height: 20rem;
+  border: none;
+  border-radius: 2rem;
+  padding: var(--app-padding-topbottom) var(--app-padding-leftright);
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+}
+
+.converter-app-header {
+  height: var(--app-header-height);
+  font-family: "roboto", "sans-serif";
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-theme-btun-container {
+  height: 80%;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#toggle-theme-btun {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: auto;
+  border: none;
+  background-color: var(--app-btun-background);
+}
+
+#text-converter-app {
+  width: calc(100%);
+  height: 100%;
+}
+
+.input-textarea {
+  height: var(--app-main-height);
+}
+
+.converter-app-textarea {
+  /* min-height: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%; */
+  /* resize: none; */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: "roboto", sans-serif;
+  border-radius: 8px;
+  resize: none;
+}
+
+.converter-app-footer {
+  height: var(--app-footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.converter-app-btun {
+  height: 2.2rem;
+  min-width: 4rem;
+  width: fit-content;
+  padding: 2px 5px;
+  border-radius: 8px;
+  margin: 0 10px;
+  border: none;
+  background-color: var(--app-btun-background);
+  color: var(--txt-color);
+  font-family: "roboto", sans-serif;
+}
+.converter-app-btun:hover {
+  background-color: var(--app-btun-hover-background);
+}
+.converter-app-btun:active {
+  background-color: var(--app-btun-clicked-background);
+}
