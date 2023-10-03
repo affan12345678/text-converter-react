@@ -82,13 +82,13 @@ function Textconverter(props) {
               <button id="toggle-theme-btun" onClick={changeTheme}>
                 {Darkmode && (
                   <i
-                    title="switch to light theme"
+                    title="switch to dark theme"
                     className="fa-solid fa-moon fa-lg"
                   ></i>
                 )}
                 {!Darkmode && (
                   <i
-                    title="switch to dark theme"
+                    title="switch to light theme"
                     className="fa-solid fa-sun fa-lg"
                   ></i>
                 )}
