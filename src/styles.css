@@ -21,7 +21,7 @@ body {
   --app-background: linear-gradient(
     45deg,
     rgba(230, 230, 250, 1) 0%,
-    rgba(220, 220, 250, 1) 100%
+    rgba(225, 225, 250, 1) 100%
   );
   --app-btun-background: rgb(206, 206, 255);
   --app-btun-hover-background: rgb(200, 200, 255);
