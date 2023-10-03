@@ -1,2 +1,2 @@
 # text-converter-react
-Created with CodeSandbox
+text to speech, text capitalizer and decapitalizer.
