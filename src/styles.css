@@ -239,8 +239,8 @@ body.dark-theme {
   height: 2.2rem;
   min-width: 4rem;
   width: fit-content;
-  padding: 2px 5px;
-  border-radius: 8px;
+  padding: 4px 10px;
+  border-radius: 5px;
   margin: 0 10px;
   border: none;
   background-color: var(--app-btun-background);

@@ -1,15 +1,15 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 
-function Textconverter() {
+function Textconverter(props) {
   const [Text, setText] = useState("");
   const [ShowspeakButton, setShowspeakButton] = useState(false);
   const [ShowstopspeakingButton, setShowstopspeakingButton] = useState(false);
   const [Darkmode, setDarkmode] = useState(true);
+  const body = document.body;
 
   const changeTheme = () => {
     setDarkmode(!Darkmode);
-    const body = document.body;
     if (body.classList.contains("dark-theme")) {
       body.classList.remove("dark-theme");
     } else {
@@ -22,8 +22,9 @@ function Textconverter() {
     if (event.target.value === "") {
       setShowspeakButton(false);
       setShowstopspeakingButton(false);
+    } else {
+      setShowspeakButton(true);
     }
-    setShowspeakButton(true);
   };
 
   const convertToup = () => {
@@ -40,18 +41,18 @@ function Textconverter() {
     let msg = new SpeechSynthesisUtterance();
     msg.text = Text;
     msg.voice = speechSynthesis.getVoices()[2];
-    if (msg.text === "") {
-      setShowspeakButton(false);
-    }
+    // if (msg.text === "") {
+    //   setShowspeakButton(false);
+    // }
     setShowspeakButton(false);
     setShowstopspeakingButton(true);
     window.speechSynthesis.speak(msg);
 
     msg.onend = () => {
-      if (msg.text === "") {
-        setShowstopspeakingButton(false);
-        setShowspeakButton(false);
-      }
+      // if (msg.text === "") {
+      //   setShowstopspeakingButton(false);
+      //   setShowspeakButton(false);
+      // }
       window.speechSynthesis.cancel();
       setShowspeakButton(true);
       setShowstopspeakingButton(false);
@@ -79,8 +80,18 @@ function Textconverter() {
             <h1>TEXT CONVERTER</h1>
             <div className="toggle-theme-btun-container">
               <button id="toggle-theme-btun" onClick={changeTheme}>
-                {Darkmode && <i class="fa-solid fa-moon fa-lg"></i>}
-                {!Darkmode && <i class="fa-solid fa-sun fa-lg"></i>}
+                {Darkmode && (
+                  <i
+                    title="switch to light theme"
+                    className="fa-solid fa-moon fa-lg"
+                  ></i>
+                )}
+                {!Darkmode && (
+                  <i
+                    title="switch to dark theme"
+                    className="fa-solid fa-sun fa-lg"
+                  ></i>
+                )}
               </button>
             </div>
           </div>
