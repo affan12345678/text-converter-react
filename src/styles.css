@@ -263,7 +263,7 @@ body.dark-theme {
 }
 
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .application {
     width: 100%;
     height: 100%;
@@ -275,7 +275,7 @@ body.dark-theme {
     width: 30%;
     font-size: 0.790rem;
     font-weight: 400;
-    height: 40%;
+    height: 45%;
     margin: 0 5px;
   }
 }
