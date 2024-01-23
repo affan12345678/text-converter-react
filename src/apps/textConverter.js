@@ -58,6 +58,8 @@ function Textconverter(props) {
       setShowstopspeakingButton(false);
     };
   };
+  // let blob = new Blob([Text], { type: 'text/plain' });
+  // let url = URL.createObjectURL(blob);
 
   const Stopspeakingtext = () => {
     setShowstopspeakingButton(false);

@@ -15,38 +15,29 @@
 }
 
 body {
-  background-color: white;
-  font-family: 'Roboto', sans-serif;
+  --body-background: rgb(170, 170, 255);
   --txt-color: black;
-  --body-background: rgb(225, 225, 255);
-  --app-background: linear-gradient(
-    45deg,
-    rgba(230, 230, 250, 1) 0%,
-    rgb(206, 206, 255) 100%
-  );
+  --app-background: rgb(206, 206, 255);
   --app-btun-background: rgb(206, 206, 255);
   --theme-toggle-btun-background: rgb(200, 200, 255);
   --app-btun-hover-background: rgb(200, 200, 255);
   --app-btun-clicked-background: rgb(190, 190, 255);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--body-background);
 }
 
 body.dark-theme {
-  --app-background: rgba(110, 110, 110, 0.6);
-  --app-background: linear-gradient(
-    45deg,
-    rgb(110, 110, 110) 0%,
-    rgb(60, 60, 60) 100%
-  );
+  --body-background: rgb(40, 40, 40);
+  --app-background: rgba(255,255,255,0.2);
   --theme-toggle-btun-background: rgb(140, 140, 140);
   --app-btun-background: rgb(150, 150, 150);
   --app-btun-hover-background: rgb(160, 160, 160);
   --app-btun-clicked-background: rgb(170, 170, 170);
   --txt-color: white;
-  --body-background: rgb(40, 40, 40);
-  min-height: 100vh;
   background-color: var(--body-background);
+  min-height: 100vh;
   color: var(--txt-color);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* .navbar {
@@ -176,7 +167,7 @@ body.dark-theme {
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 50px 5px rgba(255,255,255,0.2);
 }
 
 #text-converter-app {
@@ -187,7 +178,7 @@ body.dark-theme {
 .converter-app-header {
   height: var(--app-header-height);
   font-family: "roboto", "sans-serif";
-  font-size: calc(var(--app-header-height)/2rem);
+  font-size: calc(var(--app-header-height) / 2rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -212,7 +203,6 @@ body.dark-theme {
   justify-content: center;
 }
 
-
 .input-textarea {
   height: var(--app-main-height);
 }
@@ -231,6 +221,11 @@ body.dark-theme {
   font-family: "roboto", sans-serif;
   border-radius: 8px;
   resize: none;
+  border: none;
+}
+.converter-app-textarea:focus, 
+.converter-app-textarea:focus-within {
+  outline: 1px solid black;
 }
 
 .converter-app-footer {
@@ -262,7 +257,6 @@ body.dark-theme {
   background-color: var(--app-btun-clicked-background);
 }
 
-
 @media (max-width: 900px) {
   .application {
     width: 100%;
@@ -273,7 +267,7 @@ body.dark-theme {
   }
   .converter-app-btun {
     width: 30%;
-    font-size: 0.790rem;
+    font-size: 0.79rem;
     font-weight: 400;
     height: 45%;
     margin: 0 5px;
